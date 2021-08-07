@@ -7,3 +7,6 @@ Future plans to expand:
 - Password and secure notes saver
 - Encrypt all the passwords
 - Email certificator
+
+###Day 001
+- Did the basic organization of the project (npm installed the modules needed, folders created, basic HTML and etc.)
