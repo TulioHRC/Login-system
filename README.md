@@ -10,3 +10,6 @@ Future plans to expand:
 
 ### Day 001
 - Did the basic organization of the project (npm installed the modules needed, folders created, basic HTML and etc.)
+### Day 002
+- Created the collection on MongoDB
+- Connected on MongoDB with mongoose
