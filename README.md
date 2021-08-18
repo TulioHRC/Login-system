@@ -13,3 +13,6 @@ Future plans to expand:
 ### Day 002
 - Created the collection on MongoDB
 - Connected on MongoDB with mongoose
+## Day 003
+- Register of new accounts
+- Login to accounts
