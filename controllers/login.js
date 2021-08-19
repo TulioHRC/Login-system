@@ -33,7 +33,8 @@ module.exports = function(app){
                 res.redirect('/login')
             } else {
                 console.log('Succeed!')
-                res.redirect('/account')
+                let logData = String(data).split("'")
+                res.render('account', {user: logData[1], email: logData[3]})
             }
         })
     })
