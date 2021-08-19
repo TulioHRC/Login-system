@@ -16,3 +16,5 @@ Future plans to expand:
 ## Day 003
 - Register of new accounts
 - Login to accounts
+## Day 004
+- Account area HTML basic
