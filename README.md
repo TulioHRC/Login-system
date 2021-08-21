@@ -20,3 +20,5 @@ Future plans to expand:
 - Account area HTML basic
 ## Day 005
 - Basic CSS to all the pages, except account area
+## Day 006
+- Responsive CSS
