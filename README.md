@@ -18,3 +18,5 @@ Future plans to expand:
 - Login to accounts
 ## Day 004
 - Account area HTML basic
+## Day 005
+- Basic CSS to all the pages, except account area
