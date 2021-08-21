@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
     <title>Login</title>
 </head>
 <body>
     <%- include('partials/dash.ejs') %>
-    <h1>Login</h1>
-    <form action="/login/account" method="post">
-        <input type="email" name="email" id="email" placeholder="name@email.com">
-        <input type="password" name="password" id="pass" placeholder="Password">
-        <input type="submit">
-    </form>
+    <div class="wrapper">
+        <h1>Login</h1>
+        <form action="/login/account" method="post">
+            <input type="email" name="email" id="email" placeholder="name@email.com">
+            <input type="password" name="password" id="pass" placeholder="Password">
+            <input type="submit" id="submit" value="Log">
+        </form>
+    </div>
 </body>
 </html>
