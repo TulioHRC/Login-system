@@ -22,3 +22,5 @@ Future plans to expand:
 - Basic CSS to all the pages, except account area
 ## Day 006
 - Responsive CSS
+## Day 007
+- Basic criptograph to the passwords, but not added, just coded

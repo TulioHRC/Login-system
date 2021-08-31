@@ -21,7 +21,11 @@ const bodyParser = require('body-parser')
 
 let urlencodedParser = bodyParser.urlencoded({extended:false})
 
-module.exports = function(app){
+// Crypto
+
+const crypto = require('crypto')
+
+module.exports = function(app, key){
     app.get('/register', (req, res)=>{
         res.render('register')
     })
