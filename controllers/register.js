@@ -21,7 +21,11 @@ const bodyParser = require('body-parser')
 
 let urlencodedParser = bodyParser.urlencoded({extended:false})
 
-module.exports = function(app){
+// Crypto
+
+const crypto = require('crypto')
+
+module.exports = function(app, encrypt, keyv){
     app.get('/register', (req, res)=>{
         res.render('register')
     })
@@ -37,6 +41,8 @@ module.exports = function(app){
                     if (data.length > 0){
                         console.log('This account email is already being used!')
                     } else {
+                        let passwordEn = encrypt(req.body.user, req.body.password, keyv(req.body.user))
+                        newAccount.password = String(passwordEn)
                         newAccount.save((err, data)=>{
                             if (err) console.log(err)
                             else console.log('Saved!')
