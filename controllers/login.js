@@ -21,12 +21,32 @@ const bodyParser = require('body-parser')
 
 let urlencodedParser = bodyParser.urlencoded({extended:false})
 
-module.exports = function(app){
+module.exports = function(app, encrypt, keyv){
     app.get('/login', (req, res)=>{
         res.render('login')
     })
 
     app.post('/login/account', urlencodedParser, (req, res)=>{
+        accounts.find({email: req.body.email}, (err, data)=>{
+            if(data.length == 0){
+                console.log('The email or the password are wrong!')
+                res.redirect('/login')
+            } else {
+                let passwordEn = encrypt(String(data[0].user), req.body.password, keyv(String(data[0].user)))
+                accounts.find({email: req.body.email, password: passwordEn}, (err, data)=>{
+                    if(data.length == 0){
+                        console.log('The email or the password are wrong!')
+                        res.redirect('/login')
+                    } else {
+                        console.log('Succeed!')
+                        let logData = String(data).split("'")
+                        res.render('account', {user: logData[1], email: logData[3]})
+                    }
+                })
+            }
+        })
+        /*
+        let passwordEn = encrypt(String(data.user), req.body.password, keyv(String(data.user)))
         accounts.find({email: req.body.email, password: req.body.password}, (err, data)=>{
             if(data.length == 0){
                 console.log('The email or the password are wrong!')
@@ -37,5 +57,6 @@ module.exports = function(app){
                 res.render('account', {user: logData[1], email: logData[3]})
             }
         })
+        */
     })
 }
