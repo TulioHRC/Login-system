@@ -23,4 +23,6 @@ Future plans to expand:
 ## Day 006
 - Responsive CSS
 ## Day 007
-- Basic criptograph to the passwords, but not added, just coded
+- Basic cryptograph to the passwords, but not added, just coded
+## Day 008
+- Full cryptograph added to passwords
