@@ -4,7 +4,7 @@ const register = require(__dirname + '/controllers/register')
 const keyv = require(__dirname + '/controllers/KeyIv')
 const encrypt = require(__dirname + '/controllers/encrypt')
 
-const PORT = 3000
+const PORT = process.env.port || 3000
 
 let app = express()
 
