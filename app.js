@@ -3,7 +3,6 @@ const login = require(__dirname + '/controllers/login')
 const register = require(__dirname + '/controllers/register')
 const keyv = require(__dirname + '/controllers/KeyIv')
 const encrypt = require(__dirname + '/controllers/encrypt')
-// const decrypt = require(__dirname + '/controllers/decrypt') will not be used.
 
 const PORT = 3000
 
